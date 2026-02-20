@@ -6,7 +6,7 @@ class Globo
    x=_x;
    y=_y; 
    vx=random(-0.25,0.25);
-   vy=random(-2,-0.5);
+   vy=random(-1.2,-0.5);
   }
 
   void update()
@@ -17,7 +17,7 @@ class Globo
 
   void dibujate()
   {
-      ellipse(x,y,100,100);
+      ellipse(x,y,20,100);
   }
   
 }
@@ -33,7 +33,7 @@ void setup()
 
 void draw()
 {
-  background(50,50,200);
+  background(50,150,200);
   for(int i=0;i<globos.size();i++)
   {
     globos.get(i).update();

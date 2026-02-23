@@ -18,8 +18,8 @@ class Globo
   void dibujate()
   {
       push();
-      ellipse(x,y+19,50,50);
-      ellipse(x-25,y+25,50,50); 
+      ellipse(x-10,y+1,100,100);
+      ellipse(x+10,y+25,50,50); 
       pop();
   }
   

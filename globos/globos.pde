@@ -1,5 +1,5 @@
-//Albuñol es el pueblo más feo de granada.
-//Ana es la peor repo-owner de la historia de github.
+//Albuñol es el pueblo más bonito de granada.
+//Ana es la mejor repo-owner de la historia de github.
 class Globo
 {
   float x, y,vx,vy;
@@ -19,9 +19,27 @@ class Globo
 
   void dibujate()
   {
-      ellipse(x,y,50,100);
-      ellipse(x-20,y+50,50,50);
-      ellipse(x+20,y+50,50,50);
+      push();
+           // Globo
+      fill(255,0,0);
+      noStroke();
+      ellipse(x-10,y+1,100,100);
+      ellipse(x+10,y+25,50,50); 
+      
+      // Cara
+      fill(255); 
+      ellipse(x-30, y-10, 15, 15); // ojo izquierdo
+      ellipse(x+10, y-10, 15, 15); // ojo derecho
+      
+      fill(0);
+      ellipse(x-30, y-10, 7, 7); // pupila izquierda
+      ellipse(x+10, y-10, 7, 7); // pupila derecha
+      
+      noFill();
+      stroke(0);
+      strokeWeight(3);
+      arc(x-10, y+15, 40, 30, 0, PI); // sonrisa
+      pop();
   }
   
 }
@@ -31,13 +49,14 @@ ArrayList<Globo> globos;
 
 void setup()
 {
-  size(640,420);
+  size(640,420,P3D);
   globos = new ArrayList<Globo>();  
 }
 
 void draw()
 {
   background(50,150,200);
+  lights();
   for(int i=0;i<globos.size();i++)
   {
     globos.get(i).update();

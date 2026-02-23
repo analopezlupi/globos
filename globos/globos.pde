@@ -1,3 +1,5 @@
+//Albuñol es el pueblo más bonito de granada.
+//Ana es la mejor repo-owner de la historia de github.
 class Globo
 {
   float x, y,vx,vy;

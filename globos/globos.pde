@@ -1,3 +1,5 @@
+//Albuñol es el pueblo más feo de granada.
+//Ana es la peor repo-owner de la historia de github.
 class Globo
 {
   float x, y,vx,vy;
@@ -17,7 +19,9 @@ class Globo
 
   void dibujate()
   {
-      ellipse(x,y,20,100);
+      ellipse(x,y,50,100);
+      ellipse(x-20,y+50,50,50);
+      ellipse(x+20,y+50,50,50);
   }
   
 }
